@@ -1,0 +1,19 @@
+{
+
+    "autoload": {
+        "files": [    
+                      "backend/library/PDOConnection.php",
+                      "backend/library/Controller.php",
+                      "backend/library/Model.php",
+                      "backend/library/RequestResult.php",
+                      "backend/library/Route.php",
+                      "backend/library/LayoutController.php",
+
+                      "mvc/person/PersonController.php",
+                      "mvc/person/PersonModel.php",
+                      "mvc/product/ProductController.php",
+                      "mvc/product/ProductModel.php"
+
+                 ]
+    }
+}

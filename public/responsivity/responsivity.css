@@ -1,0 +1,128 @@
+
+
+/*
+https://www.w3schools.com/css/css_rwd_grid.asp
+First ensure that all HTML elements have the box-sizing property set to border-box. This makes sure that the padding and border are included in the total width and height of the elements.
+*/
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  /* For mobile phones: */
+  [class*="col-"] {
+      width: 100%;
+  }
+  
+  
+    @media only screen and (max-width: 576px) {
+      /* extra-small: */
+      .col-1  {width: 8.33%;}
+      .col-2  {width: 16.66%;}
+      .col-3  {width: 25%;}
+      .col-4  {width: 33.33%;}
+      .col-5  {width: 41.66%;}
+      .col-6  {width: 50%;}
+      .col-7  {width: 58.33%;}
+      .col-8  {width: 66.66%;}
+      .col-9  {width: 75%;}
+      .col-10 {width: 83.33%;}
+      .col-11 {width: 91.66%;}
+      .col-12 {width: 100%;}
+    }
+  
+    @media only screen and (min-width: 576px) {
+      /* small: */
+      .col-sm1  {width: 8.33%;}
+      .col-sm2  {width: 16.66%;}
+      .col-sm3  {width: 25%;}
+      .col-sm4  {width: 33.33%;}
+      .col-sm5  {width: 41.66%;}
+      .col-sm6  {width: 50%;}
+      .col-sm7  {width: 58.33%;}
+      .col-sm8  {width: 66.66%;}
+      .col-sm9  {width: 75%;}
+      .col-sm10 {width: 83.33%;}
+      .col-sm11 {width: 91.66%;}
+      .col-sm12 {width: 100%;}
+    }
+    
+  
+    @media only screen and (min-width: 768px) {
+      /* Medium: */
+      .col-md1  {width: 8.33%;}
+      .col-md2  {width: 16.66%;}
+      .col-md3  {width: 25%;}
+      .col-md4  {width: 33.33%;}
+      .col-md5  {width: 41.66%;}
+      .col-md6  {width: 50%;}
+      .col-md7  {width: 58.33%;}
+      .col-md8  {width: 66.66%;}
+      .col-md9  {width: 75%;}
+      .col-md10 {width: 83.33%;}
+      .col-md11 {width: 91.66%;}
+      .col-md12 {width: 100%;}
+    }
+  
+  
+    
+  @media only screen and (min-width: 992px) {
+      /* Large: */
+    .col-lg1  {width: 8.33%;}
+    .col-lg2  {width: 16.66%;}
+    .col-lg3  {width: 25%;}
+    .col-lg4  {width: 33.33%;}
+    .col-lg5  {width: 41.66%;}
+    .col-lg6  {width: 50%;}
+    .col-lg7  {width: 58.33%;}
+    .col-lg8  {width: 66.66%;}
+    .col-lg9  {width: 75%;}
+    .col-lg10 {width: 83.33%;}
+    .col-lg11 {width: 91.66%;}
+    .col-lg12 {width: 100%;}
+  }
+  
+  @media only screen and (min-width: 1200px) {
+      /* Extra large: */
+    .col-xl1  {width: 8.33%;}
+    .col-xl2  {width: 16.66%;}
+    .col-xl3  {width: 25%;}
+    .col-xl4  {width: 33.33%;}
+    .col-xl5  {width: 41.66%;}
+    .col-xl6  {width: 50%;}
+    .col-xl7  {width: 58.33%;}
+    .col-xl8  {width: 66.66%;}
+    .col-xl9  {width: 75%;}
+    .col-xl10 {width: 83.33%;}
+    .col-xl11 {width: 91.66%;}
+    .col-xl12 {width: 100%;}
+  }
+  
+  /*
+  All these columns should be floating to the left, and have a padding of 15px:
+  */
+  
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+  }
+  
+  /*
+  Each row should be wrapped in a <div>. The number of columns inside a row should always add up to 12:
+   <div class="row">
+    <div class="col-3">...</div> <!-- 25% -->
+    <div class="col-9">...</div> <!-- 75% -->
+  </div> 
+  */
+  
+  /*
+  The columns inside a row are all floating to the left, and are therefore taken out of the flow of the page, and other elements will be placed as if the columns do not exist. To prevent this, we will add a style that clears the flow:
+  */
+  
+  .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+  
